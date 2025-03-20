@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang=\"nl\">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>Recepten Website</title>
     <style>
         body {
@@ -44,48 +44,90 @@
     <header>
         Mijn Recepten
     </header>
-    <div class="container">
-        <div class="recipe">
+    <div class=\"container\">
+        <div class=\"recipe\">
             <h2>Fajita Chicken Pasta</h2>
             <p>Een romige en pittige pasta met kip en fajita-smaken.</p>
-            <a href="#" onclick="showRecipe('fajita')">Bekijk recept</a>
+            <a href=\"#\" onclick=\"showRecipe('fajita')\">Bekijk recept</a>
+        </div>
+
+        <div class=\"recipe\">
+            <h2>Köfte</h2>
+            <p>Heerlijke Turkse gehaktballen.</p>
+            <a href=\"#\" onclick=\"showRecipe('kofte')\">Bekijk recept</a>
         </div>
         
-        <div class="recipe">
+        <div class=\"recipe\">
             <h2>Alternatieve Recepten</h2>
             <ul>
-                <li><a href="https://www.allrecipes.com/recipe/239684/chicken-fajita-pasta/" target="_blank">Chicken Fajita Pasta - Allrecipes</a></li>
-                <li><a href="https://www.delish.com/cooking/recipe-ideas/a28414407/chicken-fajita-pasta-recipe/" target="_blank">Chicken Fajita Pasta - Delish</a></li>
+                <li><a href=\"https://www.allrecipes.com/recipe/239684/chicken-fajita-pasta/\" target=\"_blank\">Chicken Fajita Pasta - Allrecipes</a></li>
+                <li><a href=\"https://www.delish.com/cooking/recipe-ideas/a28414407/chicken-fajita-pasta-recipe/\" target=\"_blank\">Chicken Fajita Pasta - Delish</a></li>
             </ul>
         </div>
         
-        <div id="recipeDetails" class="container" style="display: none;">
-            <h2>Fajita Chicken Pasta Recept</h2>
-            <p><strong>Ingrediënten:</strong></p>
-            <ul>
-                <li>500g kipfilet</li>
-                <li>500g penne</li>
-                <li>2 kopjes melk</li>
-                <li>1 paprika, in reepjes</li>
-                <li>1 ui, gesneden</li>
-                <li>2 teentjes knoflook, fijngesneden</li>
-                <li>1 tl gerookte paprika</li>
-                <li>1 tl chilipoeder</li>
-                <li>100g cheddar kaas</li>
-            </ul>
-            <p><strong>Instructies:</strong></p>
-            <ol>
-                <li>Bak de kip kort en haal uit de pan.</li>
-                <li>Bak de groenten in dezelfde pan.</li>
-                <li>Voeg de pasta, melk en kruiden toe en laat koken.</li>
-                <li>Doe de kip terug in de pan en laat sudderen.</li>
-                <li>Voeg cheddar toe en roer tot het gesmolten is.</li>
-                <li>Serveer en geniet!</li>
-            </ol>
+        <div id=\"recipeDetails\" class=\"container\" style=\"display: none;\">
+            <h2 id=\"recipeTitle\"></h2>
+            <div id=\"recipeContent\"></div>
         </div>
     </div>
+
     <script>
         function showRecipe(recipe) {
+            let title = document.getElementById('recipeTitle');
+            let content = document.getElementById('recipeContent');
+            if(recipe === 'fajita'){
+                title.innerText = 'Fajita Chicken Pasta Recept';
+                content.innerHTML = `<p><strong>Ingrediënten:</strong></p>
+                <ul>
+                    <li>500g kipfilet</li>
+                    <li>500g penne</li>
+                    <li>2 kopjes melk</li>
+                    <li>1 paprika, in reepjes</li>
+                    <li>1 ui, gesneden</li>
+                    <li>2 teentjes knoflook, fijngesneden</li>
+                    <li>1 tl gerookte paprika</li>
+                    <li>1 tl chilipoeder</li>
+                    <li>100g cheddar kaas</li>
+                </ul>
+                <p><strong>Instructies:</strong></p>
+                <ol>
+                    <li>Bak de kip kort en haal uit de pan.</li>
+                    <li>Bak de groenten in dezelfde pan.</li>
+                    <li>Voeg de pasta, melk en kruiden toe en laat koken.</li>
+                    <li>Doe de kip terug in de pan en laat sudderen.</li>
+                    <li>Voeg cheddar toe en roer tot het gesmolten is.</li>
+                    <li>Serveer en geniet!</li>
+                </ol>`;
+            }
+
+            if(recipe === 'kofte'){
+                title.innerText = 'Köfte Recept';
+                content.innerHTML = `<p><strong>Ingrediënten:</strong></p>
+                <ul>
+                    <li>500g runder- of lamsgehakt</li>
+                    <li>1 ui, fijngehakt</li>
+                    <li>1 ei</li>
+                    <li>2 eetlepels paneermeel</li>
+                    <li>1 tl zwarte peper</li>
+                    <li>2 tl komijn</li>
+                    <li>Handvol verse peterselie, fijngehakt</li>
+                    <li>Zout naar smaak</li>
+                    <li>Olie om te bakken</li>
+                </ul>
+                <p><strong>Instructies:</strong></p>
+                <ol>
+                    <li>Meng alle ingrediënten goed door elkaar in een kom.</li>
+                    <li>Vorm kleine balletjes of rolletjes van het mengsel.</li>
+                    <li>Verhit olie in een pan en bak de köfte aan alle kanten gaar.</li>
+                    <li>Serveer warm met salade, rijst of brood.</li>
+                </ol>
+                <p><strong>Alternatieve recepten:</strong></p>
+                <ul>
+                    <li><a href=\"https://turkishstylecooking.com/traditional-turkish-kofte-meatballs-recipe.html\" target=\"_blank\">Traditionele Turkse Köfte</a></li>
+                    <li><a href=\"https://vidarbergum.com/recipe/izmir-kofte-turkish-meatballs-potato-tomato-sauce/\" target=\"_blank\">Izmir Köfte met groenten</a></li>
+                </ul>`;
+            }
+
             document.getElementById('recipeDetails').style.display = 'block';
         }
     </script>
