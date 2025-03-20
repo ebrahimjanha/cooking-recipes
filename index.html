@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepten Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #ff5733;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .recipe {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            color: #ff5733;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Mijn Recepten
+    </header>
+    <div class="container">
+        <div class="recipe">
+            <h2>Fajita Chicken Pasta</h2>
+            <p>Een romige en pittige pasta met kip en fajita-smaken.</p>
+            <a href="#" onclick="showRecipe('fajita')">Bekijk recept</a>
+        </div>
+        
+        <div class="recipe">
+            <h2>Alternatieve Recepten</h2>
+            <ul>
+                <li><a href="https://www.allrecipes.com/recipe/239684/chicken-fajita-pasta/" target="_blank">Chicken Fajita Pasta - Allrecipes</a></li>
+                <li><a href="https://www.delish.com/cooking/recipe-ideas/a28414407/chicken-fajita-pasta-recipe/" target="_blank">Chicken Fajita Pasta - Delish</a></li>
+            </ul>
+        </div>
+        
+        <div id="recipeDetails" class="container" style="display: none;">
+            <h2>Fajita Chicken Pasta Recept</h2>
+            <p><strong>Ingrediënten:</strong></p>
+            <ul>
+                <li>500g kipfilet</li>
+                <li>500g penne</li>
+                <li>2 kopjes melk</li>
+                <li>1 paprika, in reepjes</li>
+                <li>1 ui, gesneden</li>
+                <li>2 teentjes knoflook, fijngesneden</li>
+                <li>1 tl gerookte paprika</li>
+                <li>1 tl chilipoeder</li>
+                <li>100g cheddar kaas</li>
+            </ul>
+            <p><strong>Instructies:</strong></p>
+            <ol>
+                <li>Bak de kip kort en haal uit de pan.</li>
+                <li>Bak de groenten in dezelfde pan.</li>
+                <li>Voeg de pasta, melk en kruiden toe en laat koken.</li>
+                <li>Doe de kip terug in de pan en laat sudderen.</li>
+                <li>Voeg cheddar toe en roer tot het gesmolten is.</li>
+                <li>Serveer en geniet!</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        function showRecipe(recipe) {
+            document.getElementById('recipeDetails').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
